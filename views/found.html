@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>lost&found</title>
+</head>
+<body style="background:darkcyan">
+        <h1 style="text-align:center">Found</h1>    
+        <div class="row" style="align-content: center">
+            <form action="addfound" method="POST" style="">
+                    <textarea name="body" id="" style="height:50px; margin-left:100px; width: 400px; margin-top: 10px"></textarea>
+                    <input type="submit" value="Add Found">
+                </form>        
+            <% for(let i=0; i<found.length; i++) { %> 
+                <article style="text-align:center; height: 50px; background:cyan;margin-left: 100px;margin-right: 100px;">
+                    <p><%= found[i].body %></p>
+                </article>
+            <% } %>
+        </div>
+</body>
+</html>
