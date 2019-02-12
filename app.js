@@ -55,5 +55,5 @@ app.post('/addFound', (req, res) => {
 
 // listen
 app.listen(3000, () => {
-    console.log('listening on 3000');
+    console.log('listening on port 3000');
 })
