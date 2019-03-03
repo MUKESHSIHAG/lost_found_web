@@ -4,7 +4,6 @@ var app = express();
 
 //port number
 port = 3000
-
 //connect to database 
 
 var mongoose = require('mongoose')
