@@ -1,3 +1,48 @@
-<h1 class="mt-4">Dashboard</h1>
-<p class="lead mb-3">Welcome <%= name %></p>
-<a href="/users/logout" class="btn btn-secondary">Logout</a>
+<style>
+    body {
+        text-decoration: none;
+        background-color:#222222;
+        background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+    }
+    p {
+        font-size: 7em;
+        margin: 20px 0 20px 0;
+    }
+    a {
+        text-decoration: none;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    p:nth-child(1) a {
+        color: #fff;
+        font-family: Monoton;
+        -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+        -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+        animation: neon1 1.5s ease-in-out infinite alternate;
+    }    
+    p:nth-child(1) a:hover {
+        color: #FF1177;
+        -webkit-animation: none;
+        text-decoration: none;
+        -moz-animation: none;
+        animation: none;
+    }   
+
+    p a:hover {
+        color: #ffffff;
+    }
+    @-webkit-keyframes neon1 {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+            }
+            to {
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+            }
+        } 
+    </style>
+
+<%- include dash.ejs %>
+<h1 class="mt-4">Home</h1>
+<!-- <a href="/users/logout" class="btn btn-secondary">Logout</a> -->
+<p class="text-center name">Welcome <a href="https://github.com/MUKESHSIHAG" target="blank"><%= name %></a></p>

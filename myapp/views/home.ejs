@@ -1,0 +1,31 @@
+<style>
+        .glow {
+            font-size: 80px;
+            margin-top: 150px;
+            color: #fff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+          }
+        
+        @-webkit-keyframes glow {
+          from {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3f3c15, 0 0 40px #d168ae, 0 0 50px #83e4ab, 0 0 60px #00e6b4, 0 0 70px #e600c7;
+          }
+          
+          to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #f5ba18, 0 0 40px #78c1f1, 0 0 50px #eb5e88, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+          }
+        }
+</style>
+
+<% if(!isLoggedIn) { %>
+    <%- include welcome.ejs %>
+<% } %>
+
+<% if(isLoggedIn) { %>
+    <%- include dash.ejs %>
+<% } %>
+
+<h1 class="glow">Welcome to MyapP</h1>
