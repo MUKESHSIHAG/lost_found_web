@@ -11,11 +11,15 @@ router.get("/welcome", isLoggedIn, (req, res) => {
     }) 
 });
 
-//dashboard  route
+//dashboard route
 router.get("/dashboard", ensureAuthenticated, (req, res) => 
     res.render("dashboard", {
         name: req.user.name
 }));
+
+//restaurants route
+router.get("/restaurants", ensureAuthenticated, (req, res) => 
+    res.render("restaurants"));
 
 function isLoggedIn(req, res, next) {
     if (!req.isAuthenticated()) {
