@@ -10,7 +10,6 @@ const app = express();
 //require passport config
 require('./config/passport')(passport);
 
-
 //db Config
 const db = require('./config/keys').MongoURI;
 
