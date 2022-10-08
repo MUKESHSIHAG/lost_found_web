@@ -51,11 +51,11 @@ app.post('/addFound', (req, res) => {
     foundData.save().then( result => {
         res.redirect('/addFound');
     }).catch(err => {
-        res.status(400).send("Unable to save data");
+        res.status(400).send("Not able to save data");
     });
 });
 
 // running on localhost
 app.listen(3000, () => {
-    console.log(`listening on port ${port}`);
+    console.log(`write down on port ${port}`);
 })
